@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root{
+  --cyan: hsl(193, 38%, 86%);
+  --neon: hsl(150, 100%, 66%);
+  --gray-blue: hsl(217, 19%, 38%);
+  --dark-gray-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+
+}
+
+
+*{
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--dark-blue);
+}
+
+.container .box-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  padding: 4rem;
+  border-radius: 2rem;
+  background: var(--dark-gray-blue);
+  position: relative;
+}
+
+.container .box-container h2{
+  font-size: 20px;
+  color: var(--neon);
+  letter-spacing: 2px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.container .box-container h1{
+  text-align: center;
+  color: var(--cyan);
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 4rem;
+}
+
+.container .box-container .play-sign{
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.container .box-container .random-btn{
+  position: absolute;
+  background: var(--neon);
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  bottom: -35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.container .box-container .random-btn:hover{
+  box-shadow: 0 0 4rem var(--neon);
+}
+
+.container .box-container .random-btn img{
+  display: block;
+  padding: 1.5rem;
+  object-fit: cover;
+  width: 90%;
+}
+
+
+
+@media screen  and (max-width:640px){
+  html{
+    font-size: 55%;
+  }
+
+  .container .box-container{
+    padding: 2rem;
+    max-width: 500px;
+  }
+
+  .container .box-container .random-btn{
+    height: 50px;
+    width: 50px;
+    bottom: -25px;
+  }
+
+}
+
+@media screen  and (max-width: 505px){
+
+  html{
+    font-size: 50%;
+  }
+  .container .box-container{
+    padding: 2rem;
+    max-width: 400px;
+  }
+
+  .container .box-container h1{
+    font-size: 20px;
+  }
+}
+
+@media screen  and (max-width: 421px){
+  html{
+    font-size: 45%;
+  }
+  .container .box-container{
+    padding: 1rem;
+    max-width: 300px;
+  }
+}
